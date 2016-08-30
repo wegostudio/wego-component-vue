@@ -2,6 +2,7 @@
 	<header class="wego-header pure-g">
 		<div class="pure-u-1-2">
 			<div class="wego-header-title" v-text = "title"></div>
+			<slot name = "left"></slot>
 		</div>
 		<div class="pure-u-1-2">
 			<div class="wego-header-right w-right">
@@ -18,19 +19,28 @@
  * @module components/header
  * @desc 顶部导航
  * @param {srting} [title] - 标题
- * @param {slot} [right] - 显示在右侧区域
+ * @param {slot} [left] - 定制左侧区域内容（此时不设置title属性）
+ * @param {slot} [right] - 定制右侧区域内容
  * 
  * @example
  * <w-header title = "文字标题">
  *   <div slot="right">返回</div>
  * </w-header>
  * 
- * @example
  * <w-header title = "首页">
  *   <div slot="right">
  * 	   <img src="logo.png" />
  *   </div>
  * </w-header>
+ * 
+ * <w-header>
+ *		<div slot="left">
+ * 			<img src="logo.png"/>
+ * 		</div>
+ * 		<div slot="right">
+ * 			头部标题
+ * 		</div>
+ * 	</w-header>
  */
 
 export default {
