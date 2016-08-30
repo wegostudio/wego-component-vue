@@ -1,22 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+  	<w-header title = "头部标题">
+  		<div slot="right">返回</div>
+  	</w-header>
+  	<w-header title = "头部标题">
+  		<div slot="right">
+  			<img src="logo.png"/>
+  		</div>
+  	</w-header>
   </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      msg: 'Hello Vue 2.0!'
-    }
-  }
+import WHeader from './components/w-header'
+export default{
+	components:{
+		WHeader
+	}
 }
 </script>
 
+
 <style>
-body {
+/*@import url("http://yui.yahooapis.com/pure/0.6.0/base-min.css");*/
+@import url("styles/grids.css");
+/*@import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");*/
+/*body {
   font-family: Helvetica, sans-serif;
-}
+}*/
 </style>

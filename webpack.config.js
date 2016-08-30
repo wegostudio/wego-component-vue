@@ -8,8 +8,15 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  resolve: {
+    extensions: ['', '.js', '.vue'],
+    alias: {
+      'src': path.resolve(__dirname, '../src')
+    }
+  },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
+    fallback: path.join(__dirname, "src")
   },
   module: {
     loaders: [
