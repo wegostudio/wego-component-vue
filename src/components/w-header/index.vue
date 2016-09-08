@@ -18,7 +18,7 @@
  * w-header
  * @module components/header
  * @desc 顶部导航
- * @param {srting} [title] - 标题
+ * @param {string} [title] - 标题
  * @param {slot} [left] - 定制左侧区域内容（此时不设置title属性）
  * @param {slot} [right] - 定制右侧区域内容
  * 
@@ -45,7 +45,6 @@
 
 export default {
 	props: {
-		fixed: Boolean,
 		title: String
 	},
 };
